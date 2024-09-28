@@ -6,6 +6,12 @@ const DisTube = require('distube');
 const connectDB = require('./database');
 const PlayerManager = require('./player/PlayerManager');
 const { printWatermark } = require('./config/type.js');
+const express = require("express");
+const app = express();
+const port = 3000;
+app.listen(port, () => {
+    console.log(`🔗 Listening to GlaceYT : http://localhost:${port}`);
+});
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
